@@ -1,0 +1,40 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  background-color:blanchedalmond;
+}
+
+h1 {
+  font-weight: 700;
+  color:brown
+}
+
+p {
+  font-weight: 300;
+}
+
+.Li{
+  list-style: none;
+  display:flex;
+  align-items: center;
+  font-size:25 rem;
+}
+nav > img{
+  width:5 px;
+}
+nav{
+  display:flex;
+  align-items: center;
+  margin-right:17 px;
+}
+nav>span{
+  margin-left:25px;
+}
+.facts > li::marker{
+  color:aqua;
+  font-size:13 rem;
+
+}
