@@ -1,8 +1,10 @@
+import MyImage from "../assets/im.png"
 function Header(){
     return (
-        <main>
-            My Site visited
-        </main>
+        <header>
+            <img src= {MyImage}/>
+            <h1>My Site visited</h1>
+        </header>
     )
 }
 export default Header
