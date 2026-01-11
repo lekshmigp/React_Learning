@@ -1,4 +1,4 @@
-import MyImage from "../assets/im.png"
+import MyImage from "../assets/img.png"
 function Header(){
     return (
         <header>

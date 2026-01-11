@@ -1,9 +1,11 @@
-export default  function Entry(props){
-    return(
-        <> 
+// noo need of the import line of the App.jsx
+// noo need of the image to be imported here also 
+export default function Entry (props){
+    return (
+        
         <article className="entry">
             <div className="main-container">
-                <img  className="main-image" src= {props.image} alt="image text"/>
+                <img  className="main-image" width = "70px" src= {props.image} alt={props.place}/>
             </div>
 
             <div>
@@ -14,8 +16,7 @@ export default  function Entry(props){
             </div>
 
         </article>
-
         
-        </>
+        
     )
 }

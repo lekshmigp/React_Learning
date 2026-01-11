@@ -38,3 +38,7 @@ header > h1{
   height: 100%;
   width: 100%;
 }
+
+.entry span {
+  margin-right: 10px;
+}
