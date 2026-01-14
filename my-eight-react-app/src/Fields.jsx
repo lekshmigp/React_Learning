@@ -4,28 +4,29 @@
 //    curser.current.focus();
 // use ref={curser} in the input field also 
 import Counter from "./Footer.jsx"
+import WordLibrary from "./WordLibrary.jsx"
+import React from "react"
+
 export default function Fields(){
+// using the state hook 
+const [words,setWords]= React.useState([])
+const [filterWord,setFilterWord]= React.useState("")
+    
 
-const words =["Beautiful","positive","small-lettered"];
-// currly brackets put then all time put the return function 
-const listedwords= words.map((word)=>{
-     return <li key ={word} >{word}</li>
-})
-
-// const curser= useRef(null)
-
-//use of preventDefault without for the form to be getting to be refrehed 
+ 
 function submit(event) {
     event.preventDefault()
     console.log("prompt submitted")
 
     const formData = new FormData(event.currentTarget)
-    const newData = formData.get("prompt")
-    words.push(newData)
-
-    console.log(words)
+    const newWord = formData.get("prompt")
+    setWords(prevWords => [... prevWords,newWord])
+    event.currentTarget.reset()
 }
 
+const listedwords= words.map( word=>(
+     <li key ={word} >{word}</li>)
+    )
 
     return (
         <main>
@@ -34,13 +35,16 @@ function submit(event) {
                 // ref={curser}
                 placeholder ="e.g Plonky"
                 aria-label="Give me Words"
-                name="prompt"></input>
+                name="prompt"
+                onChange={(e) => setFilterWord(e.target.value)}
+                ></input>
                 {/* Button ontype = button is needed to be put here  */}
                 <button  type="submit" >Search Words</button>
                 <ol>
                     {listedwords}
                 </ol>
             </form>
+            <WordLibrary words={words} filterWord={filterWord} />
             <footer className="footer-counter">
             <Counter/>
             </footer>

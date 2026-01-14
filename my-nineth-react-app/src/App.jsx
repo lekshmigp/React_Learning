@@ -1,5 +1,6 @@
 import React from 'react'
 import Toggle from "./Toggle.jsx"
+import ModeChange from './ModeChange.jsx'
 export default function App() {
 // const [count,setCount ]=React.useState(0) 
 
@@ -22,6 +23,7 @@ function clicked_no(){
     <button onClick={clicked_no}> NO </button>
     <div> How many words you learned so far ;{count}</div>
     <Toggle />
+    <ModeChange />
    </> 
   )
 }
