@@ -12,7 +12,7 @@ export default function Counter() {
     }
     return (
       <div className="counter-container">
-        <h2 className="title">Increase the nof of words you learnt  </h2>
+        <h2 className="title">Increase the count </h2>
         
         <div className="counter-ui">
         

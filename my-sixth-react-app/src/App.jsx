@@ -4,7 +4,11 @@ import JokesData from "./Joke.js"
 function App() {
 const Jokes= JokesData.map((joke)=>{
 return(
-  <Joke setup= {joke.setup} punchline ={joke.punchline} />
+  <Joke 
+  key ={joke.id}
+  id ={joke.id}
+  setup= {joke.setup} 
+  punchline ={joke.punchline} />
 )
 })
   

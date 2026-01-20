@@ -5,6 +5,8 @@ body{
   margin:10px;
   font-family:Inter,sans-serif;
   background-color: #FAFAF8;
+  overflow-y: auto;
+  min-height: 100vh;
 }
 header >img{
   width:90px;
@@ -28,7 +30,8 @@ header > h2{
   /* font-weight no px needed judt the value alone is enough */
 }
 main{
-  padding:50px 30px 10px;
+  padding: 50px 30px 120px; 
+    margin: 0 auto;
 }
 .form-style{
   display: flex;
@@ -36,6 +39,7 @@ main{
   /* align-items:center; */
   /* gap: 2px; */
   height:38px;
+  flex-wrap: wrap;
 
 }
 .form-style>input{
@@ -64,8 +68,8 @@ main{
 
 }
 .counter-container {
-  background-color: #1a1a1a; /* Dark background like the image */
-  padding: 10px;
+  background-color: #1a1a1a; 
+  padding: 5px;
   text-align: center;
   color: white;
   border-radius:12px;
@@ -97,14 +101,13 @@ main{
   width: 80px;
   height: 60px;
   border-radius: 50%;
-  background-color: #4a4a4a; /* Gray color from image */
+  background-color: #4a4a4a; 
   color: white;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 1; /* Sits behind the white circle */
-  
-  /* The Secret Sauce: Negative Margins */
+
   margin-left: -20px; 
   margin-right: -20px;
 }
@@ -122,4 +125,19 @@ main{
   display: flex;
   justify-content: center;
   z-index: 100; /* Keeps it above other content */
+}
+.section-down{
+  padding: 40pxpx;
+}
+.section-down {
+  flex-basis: 100%;         
+  margin-top: 40px;         
+}
+.get_word{
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F0EFE9; 
+    border-radius: 8px;
+    margin-top: 48px;
 }

@@ -1,5 +1,6 @@
 import Header from "./components/Header.jsx"
 import Entry from "./components/Entry.jsx"
+import Message from "./Message.jsx"
 import MyImage from "./assets/im.png"
 
 function App(){
@@ -27,6 +28,7 @@ function App(){
             mapLink= "https://maps.app.goo.gl/JD83Tts8Kft2S1rh9"
             description= "Thsi is the China visiting .I travelled around 13 hours to reach the destination and it was so fun to see it"
      />
+     <Message />
     </>
   )
 }
